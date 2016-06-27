@@ -1,2 +1,2 @@
 # Treelogy
-Leaf Based Tree Identificaton System
+A Leaf Based Tree Identificaton System

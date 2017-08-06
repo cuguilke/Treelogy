@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tutorial"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Geçerli fotoğraf"
+        android:textSize="18sp"
+        android:alpha="0.8"
+        android:id="@+id/tutorial_tv1"
+        android:textColor="#d6126307"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/tutorial_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/tutorial_photogood" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:textSize="16dp"
+        android:layout_below="@+id/tutorial_iv"
+        android:id="@+id/tutorial_tv20"
+        android:textColor="#6965cf"
+        android:text="Yaprağı beyaz kağıdın üstüne koyun"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/tutorial_tv20"
+        android:id="@+id/tutorial_tv21"
+        android:textColor="#6965cf"
+        android:text="&amp;"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:textSize="16dp"
+        android:layout_below="@+id/tutorial_tv21"
+        android:id="@+id/tutorial_tv22"
+        android:textColor="#6965cf"
+        android:text="Fotoğrafını çekin"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tutorial_btn"
+        android:background="@android:color/transparent"
+        android:textColor="#131ae4"
+        android:textSize="20sp"
+        android:alpha="0.6"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="Anladım"/>
+</RelativeLayout>

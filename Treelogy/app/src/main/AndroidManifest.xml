@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.payinekereg.treelogy">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:icon="@mipmap/newlogo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".activities.EntranceActivity"
+            android:configChanges="orientation|screenLayout|screenSize" android:screenOrientation="portrait"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.MainActivity" android:configChanges="orientation|screenLayout|screenSize" android:screenOrientation="portrait"/>
+
+        <activity android:name=".activities.WebViewActivity"
+            android:configChanges="orientation|screenLayout|screenSize" android:screenOrientation="portrait"
+            android:parentActivityName="com.payinekereg.treelogy.activities.MainActivity"/>
+
+        <activity android:name=".activities.Tutorial"
+            android:configChanges="orientation|screenLayout|screenSize" android:screenOrientation="portrait"
+            android:parentActivityName="com.payinekereg.treelogy.activities.MainActivity"/>
+
+        <activity android:name=".activities.Contribute"
+            android:configChanges="orientation|screenLayout|screenSize" android:screenOrientation="portrait"
+            android:parentActivityName="com.payinekereg.treelogy.activities.MainActivity"/>
+
+        <activity android:name=".activities.SearchActivity"
+            android:configChanges="orientation|screenLayout|screenSize" android:screenOrientation="portrait"
+            android:parentActivityName="com.payinekereg.treelogy.activities.MainActivity"/>
+    </application>
+</manifest>

@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#ffffff"
+    android:focusableInTouchMode="true">
+
+    <Button
+        android:id="@+id/contribute_btn1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textColor="#000000"
+        android:paddingLeft="20dp"
+        android:background="#ffffff"
+        android:drawableLeft="@drawable/ic_action_camera"
+        android:text="FOTOĞRAF ÇEK" />
+
+    <Button
+        android:id="@+id/contribute_btn2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textColor="#000000"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff"
+        android:drawableLeft="@drawable/ic_action_picture"
+        android:paddingLeft="20dp"
+        android:text="GALERİDEN SEÇ"
+        android:layout_below="@+id/contribute_btn1"/>
+
+    <ImageView
+        android:id="@+id/contribute_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/contribute_et"
+        android:layout_below="@+id/contribute_btn2"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/contribute_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/contribute_ll"
+        android:layout_marginBottom="12dp"
+        android:padding="16dp"
+        android:hint="Lütfen türün latince ismini giriniz: "
+        android:maxLength="64" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/contribute_ll"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/contribute_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:text="İPTAL"
+            android:textSize="16dp"
+            android:textColor="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/contribute_contribute"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:text="ŞİMDİ KATKIDA BULUN"
+            android:textSize="14dp"
+            android:textColor="@color/colorPrimary"/>
+    </LinearLayout>
+
+</RelativeLayout>

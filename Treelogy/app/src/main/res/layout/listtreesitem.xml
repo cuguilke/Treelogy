@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:paddingRight="10dp"
+    android:paddingEnd="10dp"
+    android:layout_marginTop="2dp">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/listtreesitemimage"
+        android:layout_marginLeft="10dp"
+        android:contentDescription="Yaprak" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/listtreesitemtreename"
+        android:textColor="#542d2d"
+        android:textSize="20sp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/listtreesitemimage" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/listtreesitemlatinname"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/listtreesitemtreename"
+        android:layout_alignLeft="@+id/listtreesitemtreename"
+        android:layout_alignStart="@+id/listtreesitemtreename" />
+</RelativeLayout>

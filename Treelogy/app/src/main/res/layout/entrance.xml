@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/logo"/>
+
+    <TextView
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TreeLogy"/>
+
+    <Button
+        android:id="@+id/entrance_new_observation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="YENİ GÖZLEM"
+        android:drawableLeft="@drawable/ic_action_new_picture"
+        android:background="#ffffff"
+        android:layout_above="@+id/entrance_my_observations" />
+
+    <Button
+        android:id="@+id/entrance_my_observations"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="GÖZLEMLERİM"
+        android:drawableLeft="@drawable/ic_action_picture"
+        android:background="#ffffff"
+        android:layout_above="@+id/entrance_leaves" />
+
+    <Button
+        android:id="@+id/entrance_leaves"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="AĞAÇ VE YAPRAKLAR"
+        android:layout_above="@+id/entrance_how_to_use"
+        android:drawableLeft="@drawable/logo"
+        android:background="#ffffff" />
+
+    <Button
+        android:id="@+id/entrance_how_to_use"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="NASIL KULLANILIR"
+        android:drawableLeft="@drawable/ic_action_info"
+        android:background="#ffffff"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

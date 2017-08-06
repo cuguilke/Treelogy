@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/searchactivity_ll"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_collapseMode="parallax" />
+
+        <ImageView
+            android:layout_marginTop="?attr/actionBarSize"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:id="@+id/searchactivity_iv"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="18dp"
+            android:textColor="#be691515"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/searchactivity_tv"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="30dp"
+            android:padding="6dp">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/searchactivity_iv1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/searchactivity_name1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/searchactivity_iv1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/searchactivity_latinname1"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/searchactivity_name1"
+                android:layout_alignLeft="@+id/searchactivity_name1"
+                android:layout_alignStart="@+id/searchactivity_name1" />
+
+            <Button
+                android:id="@+id/searchactivity_btn1"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/searchactivity_name1"
+                android:layout_alignStart="@+id/searchactivity_name1"
+                android:text="Kabul et ve Kaydet"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:padding="6dp"
+            android:background="#ffffff">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/searchactivity_iv2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+
+                android:id="@+id/searchactivity_name2"
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="16sp"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/searchactivity_iv2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+
+                android:id="@+id/searchactivity_latinname2"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/searchactivity_name2"
+                android:layout_alignLeft="@+id/searchactivity_name2"
+                android:layout_alignStart="@+id/searchactivity_name2" />
+
+            <Button
+                android:id="@+id/searchactivity_btn2"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/searchactivity_name2"
+                android:layout_alignStart="@+id/searchactivity_name2"
+                android:text="Kabul et ve Kaydet"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:padding="6dp"
+            android:background="#ffffff">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/searchactivity_iv3" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+
+                android:id="@+id/searchactivity_name3"
+                android:textColor="@color/colorPrimaryLighter"
+                android:textSize="16sp"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/searchactivity_iv3" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+
+                android:id="@+id/searchactivity_latinname3"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/searchactivity_name3"
+                android:layout_alignLeft="@+id/searchactivity_name3"
+                android:layout_alignStart="@+id/searchactivity_name3" />
+
+            <Button
+                android:id="@+id/searchactivity_btn3"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/searchactivity_name3"
+                android:layout_alignStart="@+id/searchactivity_name3"
+                android:text="Kabul et ve Kaydet"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:padding="6dp"
+            android:background="#ffffff">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/searchactivity_iv4" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+
+                android:id="@+id/searchactivity_name4"
+                android:textColor="@color/colorPrimaryLightest"
+                android:textSize="16sp"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/searchactivity_iv4" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+
+                android:id="@+id/searchactivity_latinname4"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/searchactivity_name4"
+                android:layout_alignLeft="@+id/searchactivity_name4"
+                android:layout_alignStart="@+id/searchactivity_name4" />
+
+            <Button
+                android:id="@+id/searchactivity_btn4"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/searchactivity_name4"
+                android:layout_alignStart="@+id/searchactivity_name4"
+                android:text="Kabul et ve Kaydet"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:padding="6dp"
+            android:background="#ffffff">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/searchactivity_iv5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+
+                android:id="@+id/searchactivity_name5"
+                android:textColor="@color/colorPrimaryLightest"
+                android:textSize="16sp"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/searchactivity_iv5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+
+                android:id="@+id/searchactivity_latinname5"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/searchactivity_name5"
+                android:layout_alignLeft="@+id/searchactivity_name5"
+                android:layout_alignStart="@+id/searchactivity_name5" />
+
+            <Button
+                android:id="@+id/searchactivity_btn5"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/searchactivity_name5"
+                android:layout_alignStart="@+id/searchactivity_name5"
+                android:text="Kabul et ve Kaydet"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

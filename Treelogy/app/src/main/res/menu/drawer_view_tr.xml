@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single" android:id="@+id/group1">
+        <item
+            android:id="@+id/nav_new_observation"
+            android:icon="@drawable/d_camera"
+            android:title="Yeni Gözlem" />
+        <item
+            android:id="@+id/nav_trees_and_leaves"
+            android:icon="@drawable/d_leaf"
+            android:title="Ağaç ve Yapraklar" />
+        <item
+            android:id="@+id/nav_my_observations"
+            android:icon="@drawable/d_gallery"
+            android:title="Gözlemlerim" />
+    </group>
+
+    <item android:title="Dil">
+        <menu>
+            <group android:checkableBehavior="single" android:id="@+id/group2">
+                <item
+                    android:id="@+id/nav_lang1"
+                    android:icon="@drawable/d_tt"
+                    android:title="Türkçe" />
+                <item
+                    android:id="@+id/nav_lang2"
+                    android:icon="@drawable/d_ee"
+                    android:title="English" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="Kullanım">
+        <menu>
+            <item
+                android:id="@+id/nav_tutorial"
+                android:icon="@drawable/d_user_manuel"
+                android:title="Nasıl kullanılır?" />
+        </menu>
+    </item>
+    <item android:title="Destek">
+        <menu>
+            <item
+                android:id="@+id/nav_contribute"
+                android:icon="@drawable/d_donate"
+                android:title="Katkıda Bulun" />
+        </menu>
+    </item>
+    <item android:title="Geri Dön">
+        <menu>
+            <item
+                android:id="@+id/nav_back"
+                android:icon="@drawable/d_home"
+                android:title="Ana sayfa" />
+        </menu>
+    </item>
+</menu>

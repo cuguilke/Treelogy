@@ -37,6 +37,7 @@ import static com.payinekereg.treelogy.constants.Constants_English.eACCEPT_SAVE;
 import static com.payinekereg.treelogy.constants.Constants_English.eCANCEL;
 import static com.payinekereg.treelogy.constants.Constants_English.eSAVED;
 import static com.payinekereg.treelogy.constants.Constants_English.eSEARCH;
+import static com.payinekereg.treelogy.constants.MyConstants.MY_CONSTANTS;
 import static com.payinekereg.treelogy.constants.MyConstants.connectionCheck;
 
 /**
@@ -193,8 +194,15 @@ public class SearchActivity extends AppCompatActivity {
         protected Boolean doInBackground(byte[]... image) {
 
             this.image = image[0];
-            try {sendImage(image[0], image[0].length); return true;}
-            catch (IOException e) {e.printStackTrace(); return false;}
+            try
+            {
+                return sendImage(image[0], image[0].length);
+            }
+            catch (IOException e)
+            {
+                e.printStackTrace();
+                return false;
+            }
         }
 
         @Override
@@ -239,18 +247,27 @@ public class SearchActivity extends AppCompatActivity {
                 int []   leaveint       = MyConstants.leaveint          ;
 
                 int i1=0,i2=0,i3=0,i4=0,i5=0;
+                if(names.length > 0)
                 for(; i1 < leaves_tr.length ; i1++)
                     if(names[0].equals(leaves_tr[i1]))
                         break;
+
+                if(names.length > 1)
                 for(; i2 < leaves_tr.length ; i2++)
                     if(names[1].equals(leaves_tr[i2]))
                         break;
+
+                if(names.length > 2)
                 for(; i3 < leaves_tr.length ; i3++)
                     if(names[2].equals(leaves_tr[i3]))
                         break;
+
+                if(names.length > 3)
                 for(; i4 < leaves_tr.length ; i4++)
                     if(names[3].equals(leaves_tr[i4]))
                         break;
+
+                if(names.length > 4)
                 for(; i5 < leaves_tr.length ; i5++)
                     if(names[4].equals(leaves_tr[i5]))
                         break;
@@ -368,25 +385,30 @@ public class SearchActivity extends AppCompatActivity {
             }
             else
             {
+                finish();
                 pDialog.dismiss();
                 Toast.makeText(SearchActivity.this, "Unexpected problem occured, try again later", Toast.LENGTH_LONG).show();
             }
         }
     }
 
-    private void sendImage(byte[] image, int size) throws IOException
+    private boolean sendImage(byte[] image, int size) throws IOException
     {
         String imagesize = Integer.toString(size);
         String msg;
-        Socket sock = new Socket("104.197.247.77", 50009);
+        Socket sock = new Socket(MyConstants.SERVER_ID, 50009);
 
         sock.setTcpNoDelay(true);
         DataOutputStream os = new DataOutputStream(sock.getOutputStream());
         BufferedReader inFromServer = new BufferedReader(new InputStreamReader(sock.getInputStream()));
+
         try
         {
             //Receive '1' from server
             msg = inFromServer.readLine();
+            System.out.println(image.length + " " + size);
+            System.out.println(msg);
+
             if(msg.equals("1"))
             {
                 //Send imagesize
@@ -394,10 +416,11 @@ public class SearchActivity extends AppCompatActivity {
                 os.flush();
                 //Get response imagesize
                 msg = inFromServer.readLine();
+                System.out.println(msg);
                 if(msg.equals(imagesize + '#'))
                 {
                     //Send "OK"
-                    os.writeBytes("OK");
+                    os.writeBytes("OK#");
                     os.flush();
                     //Send image
                     for(int i=0;i<size;i++)
@@ -408,6 +431,7 @@ public class SearchActivity extends AppCompatActivity {
                     //Get result header
 
                     msg = inFromServer.readLine();
+                    System.out.println(msg);
 
                     JSONObject json = new JSONObject(msg);
                     JSONObject json1 = (JSONObject) json.get("1");
@@ -433,11 +457,12 @@ public class SearchActivity extends AppCompatActivity {
                     //Terminate the connection
                     os.writeBytes("destroy");
                     os.flush();
+                    return true;
                 }
                 else
                 {
                     //Send "NO"
-                    os.writeBytes("NO");
+                    os.writeBytes("NO#");
                     os.flush();
                     msg = inFromServer.readLine();
                     os.writeBytes("destroy");
@@ -452,5 +477,7 @@ public class SearchActivity extends AppCompatActivity {
             inFromServer.close();
             sock.close();
         }
+
+        return false;
     }
 }

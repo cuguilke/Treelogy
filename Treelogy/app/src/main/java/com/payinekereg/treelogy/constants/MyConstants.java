@@ -11,6 +11,7 @@ import com.payinekereg.treelogy.R;
  */
 public class MyConstants
 {
+    public static final String      SERVER_ID           = "130.211.179.81";//"54.213.7.195"        ;
     public static final String      MY_CONSTANTS        = "my_constants"        ;
     public static final String      IS_FIRST_ENTRANCE   = "is_first_entrance"   ;
     public static final String      LANGUAGE            = "language"            ;

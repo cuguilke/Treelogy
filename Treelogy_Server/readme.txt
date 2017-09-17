@@ -1,7 +1,7 @@
 Date: 04.11.2016 
 Author: Ilke Cugu
 
--#INSTRUCTIONS FOR PROPER CAFFE TREE IDENTIFICATION SERVER SETUP#-
+-#INSTRUCTIONS FOR PROPER TREELOGY SERVER SETUP#-
 
 !!!This document directly assumes that you downloaded all files of 
 the server.

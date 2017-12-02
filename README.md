@@ -16,4 +16,15 @@ Other necessary files:
   - deploy.prototxt -> Architecture of the ConvNet
   - ilsvrc_2012_mean.npy -> Imagemean of BVLC reference model (since our imagemean did not improve the accuracy)
  
+## Citation
 
+If you use this model or dataset in your research, please cite:
+
+```
+@article{ccuugu2017treelogy,
+  title={Treelogy: A Novel Tree Classifier Utilizing Deep and Hand-crafted Representations},
+  author={{\c{C}}u{\u{g}}u, {\.I}lke and {\c{S}}ener, Eren and Erciyes, {\c{C}}a{\u{g}}r{\i} and Balc{\i}, Burak and Ak{\i}n, Emre and {\"O}nal, It{\i}r and Aky{\"u}z, Ahmet O{\u{g}}uz},
+  journal={arXiv preprint arXiv:1701.08291},
+  year={2017}
+}
+```

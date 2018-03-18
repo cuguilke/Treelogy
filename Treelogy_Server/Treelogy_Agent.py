@@ -39,12 +39,12 @@ class Treelogy_Agent(Thread):
 			self.agentInstanceList.append({"Agent": self, "ID": self.userID, "instance": None})
 			while True:
 				self.connection.sendall("1\n") 
-				message = self.connection.recv(8)
 				buf = ""
-				for i in range(0,len(message)):
-					if message[i] != "#": #seperator sent from client for accurate int calc
-						buf += message[i]
-					else:
+				message = ""
+				while message != "#":
+					buf += message
+					message = self.connection.recv(1)
+					if not message:
 						break
 				if buf == "destroy": #means no more identification is required
 					self.isdestroy = True
@@ -57,7 +57,13 @@ class Treelogy_Agent(Thread):
 					break
 				self.connection.sendall(buf + "#\n") 
 				self.image_size = int(buf)
-				line = self.connection.recv(2)
+				line = ""
+				message = ""
+				while message != "#":
+					line += message
+					message = self.connection.recv(1)
+					if not message:
+						break
 				if line == "OK":
 					#get the image and save it with name "image{userID}#{run_count}"
 					buf = b''

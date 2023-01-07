@@ -5,7 +5,7 @@ This repository contains the original model (CNN for Treelogy leaf dataset) and 
 
 Project website:
 
-http://user.ceng.metu.edu.tr/~e1881739/Treelogy
+https://senior.ceng.metu.edu.tr/2016/payinekereg/
 
 Latest caffemodel (v7) for tree classification:
 
@@ -15,7 +15,7 @@ Treelogy dataset:
 
 ~~http://treelogy.info/dataset~~ (The link is dead due to [insufficient funds](https://www.youtube.com/watch?v=fEzHttCKR8s))
 
-https://user.ceng.metu.edu.tr/~e1881739/Treelogy/dataset.html
+https://senior.ceng.metu.edu.tr/2016/payinekereg/dataset.html
 
 Other necessary files:
   - synsetwords.txt -> Label file for 57 tree species.
